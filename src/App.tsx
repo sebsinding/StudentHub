@@ -14,7 +14,7 @@ export default function App() {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path="Login" element={<AlternativeLayout />} />
+          <Route path="/Login" element={<AlternativeLayout />} />
             <Route path="Login" element={<Login />} />
             <Route path="*" element={<NoPages />} />  
           <Route path="/" element={<Layout />}>
