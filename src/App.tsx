@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layouts/Layout";
-import Home from "./Pages/Home";
+import Calendar from "./Pages/Calendar";
 import MyLessonPlan from "./Pages/MyLessonPlan";
 import Announcements from "./Pages/Announcements";
 import CourseDatabase from "./Pages/CourseDatabase";
@@ -18,7 +18,7 @@ export default function App() {
             <Route path="Login" element={<Login />} />
             <Route path="*" element={<NoPages />} />  
           <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
+            <Route index element={<Calendar />} />
             <Route path="StudyGuidance" element={<StudyGuidance />} />
             <Route path="MyLessonPlan" element={<MyLessonPlan />} />
             <Route path="Announcements" element={<Announcements />} />
