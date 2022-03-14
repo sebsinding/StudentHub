@@ -5,8 +5,11 @@ import Paper from '@mui/material/Paper';
 import { ViewState } from '@devexpress/dx-react-scheduler';
 import {
   Scheduler,
+  Toolbar,
+  DateNavigator,
   MonthView,
   Appointments,
+  TodayButton,
 } from '@devexpress/dx-react-scheduler-material-ui';
 
 const currentDate = '2022-03-14';
@@ -29,6 +32,10 @@ const Calendar = () => {
         startDayHour={7}
         endDayHour={18}
       />
+      <Appointments />
+      <Toolbar />
+      <DateNavigator />
+      <TodayButton />
       <Appointments />
     </Scheduler>
   </Paper>
