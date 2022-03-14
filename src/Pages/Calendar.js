@@ -9,7 +9,6 @@ import {
   DateNavigator,
   MonthView,
   Appointments,
-  TodayButton,
 } from '@devexpress/dx-react-scheduler-material-ui';
 
 const currentDate = '2022-03-14';
@@ -35,7 +34,6 @@ const Calendar = () => {
       <Appointments />
       <Toolbar />
       <DateNavigator />
-      <TodayButton />
       <Appointments />
     </Scheduler>
   </Paper>
