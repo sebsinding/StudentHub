@@ -1,0 +1,41 @@
+.Titel h2 {
+    font-style: italic;
+    color: blue;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.Time p{
+    font-style: italic;
+    color: gray;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+p {
+    font-style: normal;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-left: 20px;
+}
+
+.Border {
+    border: 1px dotted grey;
+    margin: 20px 20px 20px 20px;
+    border-radius: 20px;
+    padding-bottom: 20px;
+}
+
+.Border:hover {
+    opacity: 0.5;
+}
+

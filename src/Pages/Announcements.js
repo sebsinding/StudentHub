@@ -1,6 +1,14 @@
+
+import List from "./AnnouncementsList";
+import "./Announcements.css";
+
+
 const Announcements = () => {
     return (
-      <p>Her kommer Announcements :)</p>
+      <div>
+        <h1>Announcements</h1>
+       <List/>
+      </div>
     )
   };
   

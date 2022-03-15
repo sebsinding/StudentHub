@@ -19,11 +19,12 @@ export default function App() {
             <Route path="*" element={<NoPages />} />  
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="StudyGuidance" element={<StudyGuidance />} />
-            <Route path="MyLessonPlan" element={<MyLessonPlan />} />
-            <Route path="Announcements" element={<Announcements />} />
-            <Route path="CourseDatabase" element={<CourseDatabase />} />
-            <Route path="Grades" element={<Grades />} />
+            <Route path="/StudyGuidance" element={<StudyGuidance />} />
+            <Route path="/MyLessonPlan" element={<MyLessonPlan />} />
+            <Route path="/announcements" element={<Announcements />} />
+            <Route path="/announcements" element={<Announcements />} />
+
+            <Route path="/Grades" element={<Grades />} />
           </Route>
         </Routes>
       </BrowserRouter>
