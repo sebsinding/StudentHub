@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Layout from "./Components/Layouts/Layout";
 import Calendar from "./Pages/Calendar";
 import MyLessonPlan from "./Pages/MyLessonPlan";
@@ -9,9 +9,13 @@ import Grades from "./Pages/Grades";
 import NoPages from "./Pages/NoPages";
 import Login from "./Pages/Login";
 import AlternativeLayout from "./Components/Layouts/AlternativeLayout";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "@mui/material";
+import customTheme from "./Pages/theme";
 
 export default function App() {
     return (
+      <ThemeProvider theme = {customTheme}>
       <BrowserRouter>
         <Routes>
           <Route path="/Login" element={<AlternativeLayout />} />
@@ -27,5 +31,6 @@ export default function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      </ThemeProvider>
     );
   };
