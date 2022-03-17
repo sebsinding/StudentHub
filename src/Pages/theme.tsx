@@ -13,7 +13,33 @@ const theme = createTheme({
             main: secondaryColor,
           },
         },
-    
+        components: {
+            MuiTableCell: {
+                styleOverrides: {
+                    root: {
+                        fontSize: '0.8rem'
+                    }
+                }
+            },
+
+           /* MuiPaper: {
+                styleOverrides: {
+                    elevation1: {
+                        width: '80%',
+                        height: '50%',
+                        alignItems: 'right',
+                    }
+                }
+            }
+            */
+     
+        }
+
+        
+
 });
 
 export default theme;
+
+
+

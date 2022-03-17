@@ -11,7 +11,7 @@ import {
   Appointments,
 } from '@devexpress/dx-react-scheduler-material-ui';
 import { createTheme } from '@mui/material';
-
+import './Calendar.css'
 
 const schedulerData = [
   { startDate: '2022-03-14T09:45', endDate: '2022-03-14T11:00', title: "Doctor's appointment" },
