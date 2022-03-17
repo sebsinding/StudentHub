@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layouts/Layout";
 import Home from "./Pages/Home";
 import MyLessonPlan from "./Pages/MyLessonPlan";
-import Announcements from "./Pages/Announcements";
+import AnnouncementsPage from "./Pages/Announcements";
 import CourseDatabase from "./Pages/CourseDatabase";
 import StudyGuidance from "./Pages/StudyGuidance";
 import Grades from "./Pages/Grades";
@@ -21,8 +21,7 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path="/StudyGuidance" element={<StudyGuidance />} />
             <Route path="/MyLessonPlan" element={<MyLessonPlan />} />
-            <Route path="/announcements" element={<Announcements />} />
-            <Route path="/announcements" element={<Announcements />} />
+            <Route path="/announcements" element={<AnnouncementsPage />} />
 
             <Route path="/Grades" element={<Grades />} />
           </Route>

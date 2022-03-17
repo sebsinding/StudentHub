@@ -5,6 +5,10 @@ footer#Footer {
     text-align: center;
     background-color: darkred;
     min-height: 100px;
+    position: relative;
+    height: 100%;
+    margin-top: 100px;
+
 }
 
 h2 {
