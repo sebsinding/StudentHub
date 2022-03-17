@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layouts/Layout";
 import Home from "./Pages/Home";
 import MyLessonPlan from "./Pages/MyLessonPlan";
-import AnnouncementsPage from "./Pages/Announcements";
+import AnnouncementsPage from "./Pages/Announcements/AnnouncementsPage";
 import CourseDatabase from "./Pages/CourseDatabase";
 import StudyGuidance from "./Pages/StudyGuidance";
 import Grades from "./Pages/Grades";
