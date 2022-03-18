@@ -1,4 +1,3 @@
-import calendarImg from '../Resources/calendar.png';
 import * as React from 'react';
 import { useState } from 'react';
 import Paper from '@mui/material/Paper';
@@ -11,7 +10,7 @@ import {
   Appointments,
 } from '@devexpress/dx-react-scheduler-material-ui';
 import { createTheme } from '@mui/material';
-import './Calendar.css'
+import './Styles/Calendar.css'
 import SideBar from './SideBar';
 
 const schedulerData = [
@@ -22,7 +21,7 @@ const schedulerData = [
 
 
 
-const Calendar = () => {
+const CalendarPage = () => {
   
 const [currentDate, setCurrentDate] = useState('2022-03-14');
 
@@ -56,4 +55,4 @@ const [currentDate, setCurrentDate] = useState('2022-03-14');
   )
 };
 
-export default Calendar;
+export default CalendarPage;

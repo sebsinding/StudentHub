@@ -1,7 +1,7 @@
-import './Login.css';
-import LoginForm from '../Components/LoginForm/LoginForm';
+import './Styles/Login.css';
+import LoginForm from '../../Components/LoginForm/LoginForm';
 
-const Login = () => {
+const LoginPage = () => {
     return (
       <>    
       <div className="Bg">
@@ -15,4 +15,4 @@ const Login = () => {
     )
   };
   
-  export default Login;
+  export default LoginPage;

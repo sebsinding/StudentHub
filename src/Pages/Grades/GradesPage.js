@@ -1,7 +1,7 @@
-const Grades = () => {
+const GradesPage = () => {
     return (
       <p>Her kommer  Grades :)</p>
     )
   };
   
-  export default  Grades;
+  export default  GradesPage;

@@ -1,5 +1,5 @@
-import './Pages.css'; 
-import Background from '../Resources/202.jpg';
+import './Styles/Pages.css'; 
+import Background from './Resources/Login_bg.jpg';
 
 const NoPages = () => {
   return (
