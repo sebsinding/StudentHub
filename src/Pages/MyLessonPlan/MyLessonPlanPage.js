@@ -1,7 +1,7 @@
-const MyLessonPlan = () => {
+const MyLessonPlanPage = () => {
     return (
       <p>Her kommer MyLessonPlan :)</p>
     )
   };
   
-  export default MyLessonPlan;
+  export default MyLessonPlanPage;
