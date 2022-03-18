@@ -17,7 +17,8 @@
     text-align: center;
     padding: 60px 50px;
     background-color: rgba(0, 0, 0, 0.75);
-    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 4px 28px 0px rgba(110, 110, 110, 0.75);
+    border-radius: 20px;
 }
 
 .LoginPageH1 {
