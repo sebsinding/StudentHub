@@ -14,7 +14,9 @@ const LoginForm = () => {
                 </span>
             </div>
             <div>
-                <input className='LoginButton' type="submit" value="Login"></input>
+                <form action='/Calendar'>
+                    <input className='LoginButton' type="submit" value="Login" to="/Calendar"></input>
+                </form>
             </div>
         </form>
     )
