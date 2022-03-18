@@ -15,10 +15,10 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/Login" element={<AlternativeLayout />} />
-            <Route path="Login" element={<Login />} />
+            <Route index element={<Login />} />
             <Route path="*" element={<NoPages />} />  
           <Route path="/" element={<Layout />}>
-            <Route index element={<Calendar />} />
+            <Route path="Calendar" element={<Calendar />} />
             <Route path="StudyGuidance" element={<StudyGuidance />} />
             <Route path="MyLessonPlan" element={<MyLessonPlan />} />
             <Route path="Announcements" element={<Announcements />} />
