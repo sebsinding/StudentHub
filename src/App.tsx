@@ -8,7 +8,9 @@ import StudyGuidance from "./Pages/StudyGuidance";
 import Grades from "./Pages/Grades";
 import NoPages from "./Pages/NoPages";
 import Login from "./Pages/Login";
+import AnnouncementPage from "./Pages/Announcements/AnnouncementPage";
 import AlternativeLayout from "./Components/Layouts/AlternativeLayout";
+import Announcement from "./Pages/Announcements/Components/Announcement";
 
 export default function App() {
     return (
@@ -21,8 +23,8 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path="/StudyGuidance" element={<StudyGuidance />} />
             <Route path="/MyLessonPlan" element={<MyLessonPlan />} />
-            <Route path="/announcements" element={<AnnouncementsPage />} />
-
+            <Route path="/Announcements" element={<AnnouncementsPage />} />
+            <Route path="/Announcements/:id" element={<AnnouncementPage/>} />
             <Route path="/Grades" element={<Grades />} />
           </Route>
         </Routes>

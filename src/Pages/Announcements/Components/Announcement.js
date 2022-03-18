@@ -1,5 +1,5 @@
 import React from "react";
-import "./Announcements.css";
+import "../Styles/Announcements.css";
 
 function Announcement (props) {
 
@@ -16,7 +16,6 @@ function Announcement (props) {
             </section>
             <br/>
             <p>{text}</p>
-        
       </div>
     )
   };
