@@ -13,6 +13,7 @@ import { createTheme } from '@mui/material';
 import './Styles/Calendar.css'
 import SideBar from './SideBar';
 
+
 const schedulerData = [
   { startDate: '2022-03-14T09:45', endDate: '2022-03-14T11:00', title: "Doctor's appointment" },
   { startDate: '2022-03-14T13:00', endDate: '2022-03-14T17:00', title: 'Front end web development' },
@@ -33,38 +34,36 @@ const myAppointment = ({
   </Appointments.Appointment>
 );
 
-
 const CalendarPage = () => {
   
 const [currentDate, setCurrentDate] = useState('2022-03-14');
 
   return (
     <>    
- 
-    <SideBar>
-      
-    </SideBar>
-  
-    <Paper >
-    <Scheduler 
-      data={schedulerData}
-    >
-      <ViewState
-        currentDate={currentDate}
-        onCurrentDateChange={setCurrentDate}
+      <Paper >
+        <div className='row'>
+        <SideBar />
+        <Scheduler 
+        data={schedulerData}>
+        <ViewState
+          currentDate={currentDate}
+          onCurrentDateChange={setCurrentDate}
+          />
+        <MonthView
+          startDayHour={7}
+          endDayHour={18}
         />
-      <MonthView
-        startDayHour={7}
-        endDayHour={18}
-      />
-      <Appointments
-       />
-      <Toolbar />
-      <DateNavigator />
-      <Appointments
-      appointmentComponent={myAppointment} />
-    </Scheduler>
-  </Paper>
+        <Appointments
+         />
+        <Toolbar />
+        <DateNavigator />
+        <Appointments
+        appointmentComponent={myAppointment} />
+      </Scheduler>
+
+        </div>
+    </Paper>
+   
     </>
   )
 };

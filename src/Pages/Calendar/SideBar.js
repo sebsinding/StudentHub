@@ -1,5 +1,6 @@
 import {Checkbox, FormGroup, FormControlLabel} from '@mui/material';
 import {useState, React} from 'react'
+import './Styles/SideBar.css'
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 

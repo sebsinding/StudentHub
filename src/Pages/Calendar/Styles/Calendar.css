@@ -1,8 +1,14 @@
-.MuiPaper-elevation1 {
-    align: center;
-  width: 80%;
-  height: 50%;
+
+.row {
+    display:flex; 
+    flex-direction:row;
 }
+
+.courseTitle {
+    font: roboto;
+    font-size: 0.8rem;
+}
+
 /* 
 .css-fcw82u-MuiTableCell-root {
     background-color: red;
