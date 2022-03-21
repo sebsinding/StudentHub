@@ -18,11 +18,11 @@ export default function App() {
       <ThemeProvider theme = {customTheme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/Login" element={<AlternativeLayout />} />
-            <Route path="Login" element={<LoginPage />} />
+          <Route path="/LoginPage" element={<AlternativeLayout />} />
+            <Route index element={<LoginPage />} />
             <Route path="*" element={<NoPages />} />  
           <Route path="/" element={<Layout />}>
-            <Route index element={<CalendarPage />} />
+            <Route path="Calendar" element={<CalendarPage />} />
             <Route path="StudyGuidance" element={<StudyGuidancePage />} />
             <Route path="MyLessonPlan" element={<MyLessonPlanPage />} />
             <Route path="Announcements" element={<AnnouncementsPage />} />
