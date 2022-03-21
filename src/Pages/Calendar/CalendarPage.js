@@ -18,7 +18,20 @@ const schedulerData = [
   { startDate: '2022-03-14T13:00', endDate: '2022-03-14T17:00', title: 'Front end web development' },
 ];
 
-
+const myAppointment = ({
+  children, style, ...restProps
+}) => (
+  <Appointments.Appointment
+    {...restProps}
+    style={{
+      ...style,
+      backgroundColor: '#a02d37',
+      borderRadius: '8px',
+    }}
+  >
+    {children}
+  </Appointments.Appointment>
+);
 
 
 const CalendarPage = () => {
@@ -31,7 +44,7 @@ const [currentDate, setCurrentDate] = useState('2022-03-14');
     <SideBar>
       
     </SideBar>
-
+  
     <Paper >
     <Scheduler 
       data={schedulerData}
@@ -48,7 +61,8 @@ const [currentDate, setCurrentDate] = useState('2022-03-14');
        />
       <Toolbar />
       <DateNavigator />
-      <Appointments />
+      <Appointments
+      appointmentComponent={myAppointment} />
     </Scheduler>
   </Paper>
     </>
