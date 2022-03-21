@@ -25,7 +25,17 @@
     transition: 0.50s;
 }
 
+.InputBox:hover {
+    width: 250px;
+    border: 2px solid rgba(255, 255, 255, 1);
+    transition: 0.50s;
+}
 
+.InputBox:focus {
+    width: 250px;
+    border: 2px solid rgba(255, 255, 255, 1);
+    transition: 0.50s;
+}
 
 .LoginButton {
     margin-top: 50px;
