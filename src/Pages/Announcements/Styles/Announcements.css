@@ -43,5 +43,8 @@ h1 {
 .Border:hover {
     opacity: 1;
 }
+.content{
+    min-height: 470px;
+}
 
 

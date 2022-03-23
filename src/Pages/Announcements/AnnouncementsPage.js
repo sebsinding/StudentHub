@@ -2,27 +2,29 @@ import React from "react";
 import "./Styles/Announcements.css";
 import { useEffect, useState } from "react";
 import Announcement from "./Components/Announcement";
-import AnnouncementPage from "./AnnouncementPage";
 import { useNavigate } from "react-router-dom";
 
 
-
-
 const AnnouncementsPage = () => {
+  //varialbe for navigate
   const nav = useNavigate();
-  const [Announcements, setAnnouncements] = useState([]);
 
-  useState(() => {
+  //useState for data of announcements
+  const [data, setAnnouncements] = useState([]);
+
+  useEffect(() => {
     getAnnouncements();
-  }, [])
+  }, [data]) 
+
   async function getAnnouncements() {
+    
     try {
       
       // real request (axios)
     
       // Fake request
       setTimeout(() => {
-
+        //list of announcements
         let data = [
           {
               id: 1,
@@ -46,29 +48,29 @@ const AnnouncementsPage = () => {
               text: "Hello we have a meeting tomorrow, remember to bring you glasses and have some fun in the sea and you should also give me money"
           }
         ]
-
+        //sets data in a useState
         setAnnouncements(data);
 
-      }, 20)
+      }, 20) //load time
 
-    } catch (error) {
+    } catch (error) { //catch if error in getting data.
       console.log(error)
     }
-  }
+  } 
 
+  //function for loading of each data element in the list while making it onClick and giving a unique key.
 function loadAnnouncements() {
-  return Announcements.map(data => <Announcement onClick={() => onAnnouncementClick(data.id)} key={data.id}  {...data} />)
+  return data.map(data => <Announcement onClick={() => onAnnouncementClick(data.id)} key={data.id}  {...data} />)
 }
 
+//function for on click of announcements.
 function onAnnouncementClick(id) {
   // Navigate to new page with this id
   let path = "/Announcements/" + id;
-  console.log(path);
   nav(path);
-  //let newURL = new URL(id, "/Announcements/");
 }
   return (
-    <div>
+    <div className="content">
       <div>
         <h1>Announcements</h1>
         {loadAnnouncements()}
