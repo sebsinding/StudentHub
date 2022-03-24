@@ -39,9 +39,9 @@ return (
         {loading && <p>indlæser announcement..</p>}
         {!loading && <div>
             <h1>{data.type}</h1>
-            <section>
+            <section className="borderBox">
             <p>{data.time}</p>
-            <h2>{data.title}</h2>
+            <h3 className="title">{data.title}</h3>
             <p>{data.text}</p>
             </section>
             </div>}
