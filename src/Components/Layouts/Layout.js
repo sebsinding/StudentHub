@@ -1,12 +1,15 @@
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { Outlet } from "react-router-dom";
+import "./Layout.css";
 
 const Layout = () => {
   return (
     <>
     <Header />
-    <Outlet />
+    <div className="sideMargin">
+      <Outlet />
+    </div>
     <Footer />
     </>
   )
