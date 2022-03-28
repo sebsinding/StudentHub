@@ -15,7 +15,9 @@ import {
 import { createTheme } from '@mui/material';
 import './Styles/Calendar.css'
 import SideBar from './SideBar';
+import appointmentData from './appointmentData';
 
+//const schedulerData = appointmentData.map(appointmentData => appointmentData.title);
 
 const schedulerData = [
   { startDate: '2022-03-14T09:45', endDate: '2022-03-14T11:00', title: "Doctor's appointment" },
@@ -59,16 +61,25 @@ const [currentViewName, setCurrentViewName] = useState('month');
         <DayView
         name='day'
         displayName="Today"
+        startDayHour={6}
+        endDayHour={22}
+        cellDuration={60}
+        onDoubleClick/*={}*/
         />
         <WeekView
+        cellDuration={60}
         name='week'
         displayName="Week"
+        startDayHour={6}
+        endDayHour={20}
+        onDoubleClick/*={}*/
         />
         <MonthView
         name='month'
         displayName="Month"
           startDayHour={7}
           endDayHour={18}
+          onDoubleClick/*={}*/
         />
         <Appointments
          />
