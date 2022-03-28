@@ -1,14 +1,6 @@
 
-footer#Footer {
+.Footer {
     margin: 0px;
     padding: 0px;
     text-align: center;
-    background-color: darkred;
-    min-height: 100px;
-}
-
-h2 {
-    padding: 30px;
-    color: white;
-    text-align: left;
 }

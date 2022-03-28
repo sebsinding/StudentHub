@@ -1,10 +1,11 @@
 import './Footer.css';
+import NavBarFooter from './NavBarFooter/NavBarFooter';
 
 const Footer = () => {
     return (
         <>
-        <footer id='Footer'>
-                <h2>StudentHub. By students, for students</h2>
+        <footer className='Footer'>
+        <NavBarFooter />
         </footer>
         </>
     )

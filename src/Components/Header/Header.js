@@ -1,10 +1,13 @@
 import './Header.css';
+import NavBarHeader from './NavBarHeader/NavBarHeader';
 
 const Header = () => {
     return (
-        <header id='Header'>
-            <h1>StudentHub.</h1>
+        <>
+        <header className='Header'>
+        <NavBarHeader />
         </header>
+        </>
     )
   };
   

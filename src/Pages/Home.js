@@ -1,4 +1,5 @@
 import './Pages.css'; 
+
 import Calendar from '../Resources/calendar.png';
 
 const Home = () => {
