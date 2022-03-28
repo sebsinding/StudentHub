@@ -1,0 +1,28 @@
+
+.row {
+    display:flex; 
+    flex-direction:row;
+}
+
+
+/* 
+.css-fcw82u-MuiTableCell-root {
+    background-color: red;
+    font-size: 12px;
+}
+
+.css-3nejl.Appointment-appointment {
+    background-color: red !important; 
+}
+
+.HorizontalAppointment-content.css-vr6fpo {
+    background-color: red;
+}
+
+.css-fcw82u-MuiTableCell-root.Cell-dayOfWeek{
+    font-size: 1rem;
+}
+
+.css-fcw82u-MuiTableCell-root{
+    font-size: 1rem;
+} */
