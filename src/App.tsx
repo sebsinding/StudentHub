@@ -3,6 +3,7 @@ import Layout from "./Components/Layouts/Layout";
 import CalendarPage from "./Pages/Calendar/CalendarPage";
 import MyLessonPlanPage from "./Pages/MyLessonPlan/MyLessonPlanPage";
 import AnnouncementsPage from "./Pages/Announcements/AnnouncementsPage";
+import AnnouncementPage from "./Pages/Announcements/AnnouncementPage";
 import CourseDatabasePage from "./Pages/CourseDatabase/CourseDatabasePage";
 import StudyGuidancePage from "./Pages/StudyGuidance/StudyGuidancePage";
 import GradesPage from "./Pages/Grades/GradesPage";
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="StudyGuidance" element={<StudyGuidancePage />} />
             <Route path="MyLessonPlan" element={<MyLessonPlanPage />} />
             <Route path="Announcements" element={<AnnouncementsPage />} />
+            <Route path="Announcements/:id" element={<AnnouncementPage />} />
             <Route path="CourseDatabase" element={<CourseDatabasePage />} />
             <Route path="Grades" element={<GradesPage />} />
           </Route>
