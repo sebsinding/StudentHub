@@ -7,6 +7,9 @@ import {
   Toolbar,
   DateNavigator,
   MonthView,
+  WeekView,
+  DayView,
+  ViewSwitcher,
   Appointments,
 } from '@devexpress/dx-react-scheduler-material-ui';
 import { createTheme } from '@mui/material';
@@ -36,7 +39,9 @@ const myAppointment = ({
 
 const CalendarPage = () => {
   
-const [currentDate, setCurrentDate] = useState('2022-03-14');
+const [currentDate, setCurrentDate] = useState(Date().toLocaleString());
+
+const [currentViewName, setCurrentViewName] = useState('month');
 
   return (
     <>    
@@ -48,15 +53,29 @@ const [currentDate, setCurrentDate] = useState('2022-03-14');
         <ViewState
           currentDate={currentDate}
           onCurrentDateChange={setCurrentDate}
+          currentViewName={currentViewName}
+          onCurrentViewNameChange={setCurrentViewName}
           />
+        <DayView
+        name='day'
+        displayName="Today"
+        />
+        <WeekView
+        name='week'
+        displayName="Week"
+        />
         <MonthView
+        name='month'
+        displayName="Month"
           startDayHour={7}
           endDayHour={18}
         />
         <Appointments
          />
         <Toolbar />
+        <ViewSwitcher />
         <DateNavigator />
+       
         <Appointments
         appointmentComponent={myAppointment} />
       </Scheduler>
