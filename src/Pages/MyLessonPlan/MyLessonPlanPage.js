@@ -13,6 +13,10 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import './Styles/LessonPlan.css';
 
+const weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+const numberOfAccordions = [1, 2, 3];
+
+
 
 function skipLastTimelineItem(number) {
   if (number != weeks.length) {
@@ -22,44 +26,72 @@ function skipLastTimelineItem(number) {
   }
 }
 
-const weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
-const timelineItems = weeks.map((number) =>
-  <TimelineItem>
-    <TimelineSeparator>
-      <TimelineDot />
-      {skipLastTimelineItem(number)}
-    </TimelineSeparator>
-    <TimelineContent>Week {number}</TimelineContent>
-  </TimelineItem>
+const rowItems = weeks.map((number) =>
+  <div className="row">
+    <div>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot  />
+          {skipLastTimelineItem(number)}
+        </TimelineSeparator>
+        <TimelineContent>Week {number}</TimelineContent>
+      </TimelineItem>
+    </div>
+    <div>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+        >
+          <Typography>Topic of today is..</Typography>
+
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+
+        </AccordionDetails>
+      </Accordion>
+    </div>
+    {/*{accordions}*/}
+  </div>
 );
 
-const accordionItems = weeks.map((number) =>
-  <Accordion>
-    <AccordionSummary
-      expandIcon={<ExpandMoreIcon />}
-      aria-controls="panel1a-content"
-      id="panel1a-header"
-    >
-      <Typography>Accordion 1</Typography>
-    </AccordionSummary>
-    <AccordionDetails>
-      <Typography>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        malesuada lacus ex, sit amet blandit leo lobortis eget.
-      </Typography>
-    </AccordionDetails>
-  </Accordion>)
+const accordions = numberOfAccordions.map(() =>
+
+  <div>
+    <Accordion>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+      >
+        <Typography>Topic of today is..</Typography>
+
+      </AccordionSummary>
+      <AccordionDetails>
+        <Typography>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          malesuada lacus ex, sit amet blandit leo lobortis eget.
+        </Typography>
+
+      </AccordionDetails>
+    </Accordion>
+  </div>
+
+
+
+);
+
+
+
 
 
 const MyLessonPlanPage = () => {
   return (
     <>
-      <div className='row'>
-        <Timeline>
-          {timelineItems}
-        </Timeline>
-        {accordionItems}
-      </div>
+     <Timeline position="left">
+        {rowItems}
+      </Timeline>
     </>
   )
 };
