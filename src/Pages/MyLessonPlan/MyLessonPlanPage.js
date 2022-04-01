@@ -8,6 +8,7 @@ import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+
 //MenutItem
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
@@ -15,10 +16,13 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+import Course from './Course.js'
+
 
 import './Styles/LessonPlan.css';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
 
 function createData(weekNo, date, topic, learningObjectives, litterature, pages) {
   return { weekNo, date, topic, learningObjectives, litterature, pages };
@@ -41,17 +45,74 @@ const rows = [
   createData('13', '28/4', 'UI', 'bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla'),
 ];
 
-const courses = ['Frontend', 'Backend', 'Datacommunication'];
 
 
 const MyLessonPlanPage = () => {
 
-  const [course, setCourse] = useState(courses[0]);
+  //useState for data of courses
+const [courseData, setCourses] = useState([]);
 
-  const handleChange = (event) => {
-    setCourse(event.target.value);
-  };
 
+useEffect(() => {
+  getCourses();
+}, [courseData]) 
+
+
+  
+async function getCourses() {
+  try {
+    // real request (axios)
+  
+    // Fake request
+    setTimeout(() => {
+      //list of courses
+      let courseData = [
+        {
+            id: 1,
+            title: 'Frontend',
+        },
+        {
+            id: 2,
+            title: 'Backend',
+        },
+        {
+            id: 3,
+            title: 'Datacommunication',
+        },
+        {
+          id: 4,
+          title: 'Swift Development',
+        },
+        {
+        id: 5,
+        title: 'CDIO',
+        },
+        {
+          id: 6,
+          title: 'Algorithms',
+          }
+      ]
+      //sets data in a useState
+      setCourses(courseData);
+
+    }, 20) //load time
+
+  } catch (error) { //catch if error in getting data.
+    console.log(error)
+  }
+} 
+
+function loadCourses() {
+  return courseData.map(courseData =>  <MenuItem key={courseData.id} value={courseData.title}> {courseData.title} </MenuItem> 
+     );
+}
+
+
+const [courseTitle, setCourseTitle] = useState('');
+
+const handleChange = (event) => {
+  setCourseTitle(event.target.value);
+};
 
   return (
     <>
@@ -60,18 +121,17 @@ const MyLessonPlanPage = () => {
 <Box>
   <FormControl sx={{ minWidth: 200 }}>
         <InputLabel id="select-course-label">Course</InputLabel>
+        
         <Select
-          value={course}
+          value={courseTitle}
           label="Course"
-
           onChange={handleChange}
         >
+          {loadCourses()}
 
-  
-          <MenuItem value={1}>Frontend Webdevelopment</MenuItem>
-          <MenuItem value={2}>Backend Development</MenuItem>
-          <MenuItem value={3}>Datacommunication</MenuItem>
         </Select>
+
+        
       </FormControl>
     </Box>
 
