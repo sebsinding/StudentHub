@@ -31,5 +31,4 @@ const StudyGuidance = () => {
     )
   }
   ;
-  
   export default StudyGuidance;
